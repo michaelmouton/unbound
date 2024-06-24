@@ -19,17 +19,23 @@ cd unbound
 
 Build for your hardware.
 
-```sudo docker build -t unbound .```
+```
+sudo docker build -t unbound .
+```
 
 Deploy via Docker Run.
 
-```sudo docker run -d --restart=always -p 53:53/tcp -p 53:53/udp --dns=127.0.0.1 --hostname=dns --name=unbound_svr unbound```
+```
+sudo docker run -d --restart=always -p 53:53/tcp -p 53:53/udp --dns=127.0.0.1 --hostname=dns --name=unbound_svr unbound
+```
 
 ## Building for non-local hardware
 
 Make sure you can build for any architecture, regardless of the host machine.
 
-```docker run --privileged --rm tonistiigi/binfmt --install all```
+```
+docker run --privileged --rm tonistiigi/binfmt --install all
+```
 
 Clone the GitHub repository.
 
@@ -49,4 +55,6 @@ sudo docker buildx build --platform "linux/arm/v6" -t unbound .
 
 Export the image.
 
-```sudo docker save unbound > unbound.tar```
+```
+sudo docker save unbound > unbound.tar
+```
