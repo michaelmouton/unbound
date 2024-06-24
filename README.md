@@ -2,7 +2,7 @@
 
 This is a small project where I have configured Unbound as a simple recursive DNS server.  I.e. any quaries made will be passed on to the authoritative DNS nameservers.
 
-The container is build on an Alpine Linux base, with additional packages installed from their repository.
+The container is build on Alpine Linux, with additional packages installed from their repository.
 
 Every time the container is started from a cold state, it automatically updates the root.hints file.
 
