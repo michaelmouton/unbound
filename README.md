@@ -6,7 +6,7 @@ The container is build on Alpine Linux, with additional packages installed from 
 
 Every time the container is started from a cold state, it automatically updates the root.hints file.
 
-If you want to deploy you will have to build this container from source, so to speak.  I do not provide images.
+Pre-build images can be found at the [Docker Hub](https://hub.docker.com/r/michaelmouton/unbound) registry.
 
 ## Building and deploying on local hardware
 
@@ -34,7 +34,7 @@ sudo docker run -d --restart=always -p 53:53/tcp -p 53:53/udp --dns=127.0.0.1 --
 Make sure you can build for any architecture, regardless of the host machine.
 
 ```
-docker run --privileged --rm tonistiigi/binfmt --install all
+sudo docker run --privileged --rm tonistiigi/binfmt --install all
 ```
 
 Clone the GitHub repository.
