@@ -26,7 +26,7 @@ sudo docker build -t unbound .
 Deploy via Docker Run.
 
 ```
-sudo docker run -d --restart=always -p 53:53/tcp -p 53:53/udp --hostname=dns --name=unbound_svr unbound
+sudo docker run -d --restart=always -p 53:53/tcp -p 53:53/udp --name=unbound_svr unbound
 ```
 
 ## Building for non-local hardware
